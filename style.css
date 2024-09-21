@@ -1,0 +1,413 @@
+/* fonts */
+.ibm-plex-mono-semibold {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .ibm-plex-mono-light {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+/* body settings */
+body {
+    background-color: rgb(235, 228, 214);
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    text-align: center;
+}
+
+/* back button */
+.backBtn {
+    height: 5vh;
+    width: 5vw;
+    background-color: rgb(34, 39, 92);;
+    position: absolute;
+    z-index: 100;
+    outline: 3px solid rgb(248, 255, 157);
+}
+
+/* tag settings */
+h1{
+    color: rgb(236, 89, 66);
+    font-size: 3em;
+    line-height: 8vh;
+}
+
+h2{
+    font-size: 13rem;
+    color: rgba(34, 39, 92, 0.661);
+}
+
+p{
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+}
+span{
+    font-size: 0.5em;
+}
+
+/* index.html backgound text blur */
+#blur{
+    grid-area: 1/1/10/10;
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    max-width: 100vw;
+    max-height: 100vh;
+    filter: blur(10px);
+}
+
+/* content container index.html */
+.pageCont {
+    display: grid;
+    max-width: 40vw;
+    margin: auto;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1%;
+    box-sizing: border-box;
+    gap: 1%;
+    height: 100vh;
+    
+}
+
+/* title index.html */
+.indexTitle {
+    position:relative;
+    background-color: rgba(254, 249, 158, 0.499);
+    z-index: 3;
+    font-size: 1.5rem;
+    max-height: 50vh;
+    width: 100%;
+    padding: 1vh;
+}
+
+/* border radius */
+.borderRad {
+    border-radius: 10px;
+}
+
+/* link to pages */
+#materialBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2%;
+    height: 100%;
+    width: 100%;
+}
+
+/* setting the individual grids */
+#materialBox > div {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* sub title in grids */
+#materialBox > div p,
+.container > div p{ /*text over all colors for readibility*/
+    color: rgba(254, 249, 158);
+    z-index: 4;
+    transition: opacity 0.5s ease;
+}
+
+/* make grid into link */
+#materialBox > div a,
+.backBtn a{
+    text-decoration: none; /* Remove underline from the text */
+    height: inherit;
+    width: inherit;
+}
+
+/*dark overlay for page links*/
+.overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(23, 28, 42, 0.435);
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.overlay a {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+/*material square image*/
+#raw{
+    grid-area:1/1/3/2;
+    background-image: url('https://as1.ftcdn.net/v2/jpg/00/56/88/18/1000_F_56881864_PqXXNa9qy6KOWK8l2GkmSL5geBhxxgED.jpg');
+}
+
+#recycle{
+    grid-area:1/2/2/4;
+    background-image: url('https://polygood.com/wp-content/uploads/2024/02/home-hero-scaled.jpg');
+    background-size: 80%;
+}
+
+#concrete{
+    grid-area:2/2/3/3;
+    background-image: url('https://www.panjetanibuildwell.com/blog/wp-content/uploads/2024/02/Precast-Concrete.jpeg');
+    background-size: 100%;
+}
+
+#system{
+    grid-area:2/3/4/4;
+    background-image: url('https://www.lorentz.de/wp-content/uploads/2016/05/lorentz-pv-modules-lc300-p72-600x600.jpg');
+    background-size: 250%;
+}
+
+#natural{
+    grid-area:3/1/4/3;
+    background-image: url('https://d7fcfvvxwoz9e.cloudfront.net/dom43635/wp-content/uploads/2022/05/Terrazzo-Countertops.jpg');
+}
+
+
+/*content*/
+
+/*content page background container settings*/
+.container{ 
+    display: grid;
+    height: 100vh;
+    gap: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+/* individual grid, set to center */
+.container > div { /*center the texts*/
+    display: grid;
+    place-items: center;
+}
+
+/*grid layout template*/
+#threeBythree{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+#fourByfour{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+#fiveByFive{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+/*universal title styling*/
+.title{ 
+    max-width:100%;
+    color: rgba(254, 249, 158);;
+    background-color: rgb(34, 39, 92);
+    font-size: 5rem;
+ }
+
+
+/*page1*/
+#page1Title{ 
+    grid-area: 1/1/2/3;
+}
+
+/*raw materials bento box location*/
+#bamboo{
+    grid-area: 1/3/3/4;
+    background-image: url('https://t3.ftcdn.net/jpg/00/56/88/18/360_F_56881864_PqXXNa9qy6KOWK8l2GkmSL5geBhxxgED.jpg');
+}
+
+#stone{
+    grid-area: 2/1/3/2;
+    background-image: url('https://bimsmithstorage.blob.core.windows.net/news-content/20231114_stone.png');    
+}
+
+#cork{
+    grid-area: 2/2/4/3;
+    background-image: url('https://taliejaneinteriors.com/wp-content/uploads/2017/08/cork-wine-stoppers.jpg');
+}
+
+#wool{
+    grid-area: 3/3/4/4;
+    background-image: url('https://img.rockwool.com/https%3A%2F%2Fbrandcommunity.rockwool.com%2Fasset%2FXXdD64wClKyMGim5Go9UMA?auto=format&s=4b8b9c53289069c1e9ad897867265b81');
+    
+}
+
+#terracotta{
+    grid-area: 3/1/4/2;
+    background-image: url('https://cdn.britannica.com/00/136500-050-4C011D84/Terra-cotta-pots.jpg');
+}
+
+/*title box page2*/ 
+#page2Title{
+    grid-area: 2/2/4/4;
+}
+
+/*recycled materials bento box layout*/
+#plastic{
+    grid-area: 1/1/4/2;
+    background-image: url('https://cdn.potatohead.co/potato_head_x_max_lamb_possible_is_nothing_1_1_6df3d85118.jpg');
+}
+
+#tires{
+    grid-area: 1/2/2/4;
+    background-image: url('https://recyclinginside.com/wp-content/uploads/2021/01/tires-recycling.jpg');
+}
+
+#bioBlock{
+    grid-area: 1/4/3/5;
+    background-image: url('https://resource-recycling.com/plastics/wp-content/uploads/sites/4/2021/12/ByBlock-Copy-of-IMG_1407-web-1024x683.jpg')
+}
+
+#reclaimedWood{
+    grid-area: 3/4/5/5;
+    background-image: url('https://i0.wp.com/www.albanywoodworks.com/wp-content/uploads/2016/06/home-build-sustainable-6.jpg?fit=1920%2C1500&ssl=1');
+}
+
+#steel{
+    grid-area: 4/1/5/3;
+    background-image: url('https://mdbarnmaster.com/wp-content/uploads/2022/02/Cold-Formed-Steel-Buildings-Universal-Structures.jpg');
+}
+
+#rubber{
+    grid-area: 4/3/5/4;
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS05A2g89cu96B-F6OQ49QA8TNuYgtCZCrHPg&s')
+}
+
+/*title box page3*/ 
+#page3Title{
+    grid-area: 2/1/3/2;
+}
+
+/*concrete materials bento box layout*/
+#timbercrete{
+    grid-area: 1/1/2/3;
+    background-image:url('https://timbercrete.wordpress.com/wp-content/uploads/2015/04/cropped-timbercrete-building-blocks-032.jpg?w=547&h=226')
+}
+
+#hempcrete{
+    grid-area: 1/3/2/4;
+    background-image:url('https://images.squarespace-cdn.com/content/v1/60462e31eae2d67bc944f474/66594a1d-bbc5-4548-bcd5-afcf14772795/Hemp%2Bblocks.png')
+}
+
+#ashcrete{
+    grid-area: 2/2/3/4;
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Fly_Ash_Bricks.jpg/1200px-Fly_Ash_Bricks.jpg')
+}
+
+#precast{
+    grid-area: 3/1/4/3;
+    background-image: url('https://www.countymaterials.com/media/zoo/images/precast_structure_3_76dea4e4fd430171894633b0af1001c1.jpeg');
+}
+
+#bend{
+    grid-area: 3/3/4/4;
+    background-image: url('https://i0.wp.com/theconstructor.org/wp-content/uploads/2019/10/Flexible-or-Bendable-Concret.jpg?fit=936%2C624&ssl=1');
+}
+
+/*title box page4*/ 
+#page4Title{
+    grid-area: 2/2/3/3;
+}
+
+/*system materials bento box layout*/
+#solar{
+    grid-area: 1/1/2/3;
+    background-image:url('https://cdn.i-scmp.com/sites/default/files/styles/wide_landscape/public/2014/04/18/f51d5d11492d8a060fce86846d2cabaa.jpg?itok=sUQTdMkh');
+}
+
+#alumFoam{
+    grid-area: 1/3/3/4;
+    background-image:url('https://staging.cymat.com/wp-content/uploads/2019/05/technology_flat-panel.jpg');
+    background-size:120%
+}
+
+#window{
+    grid-area: 3/2/4/4;
+    background-image:url('https://knowablemagazine.org/docserver/fulltext/10.1146/knowable-060822-3/smart-windows-1600x600.jpg');
+}
+
+#panel{
+    grid-area: 2/1/4/2;
+    background-image:url('https://www.harborfreight.com/media/catalog/product/cache/9fc4a8332f9638515cd199dd0f9238da/5/7/57325_W3.jpg');
+    background-size: 160%;
+}
+
+/*title box page5*/ 
+#page5Title{
+    grid-area: 2/4/3/6;
+}
+
+/*natural materials bento box layout*/
+#clay{
+    grid-area: 1/1/3/3;
+    background-image:url('https://storage.googleapis.com/stateless-www-sadecor-co-za/2023/12/ac083ed4-bricks12-504x756.jpeg')
+}
+
+#teraz{
+    grid-area: 1/3/2/4;
+    background-image: url('https://img.freepik.com/premium-vector/terrazzo-tile-mosaic-pattern-terazzo-marble-floor_8071-60756.jpg')
+}
+
+#hydro{
+    grid-area: 2/3/3/4;
+    background-image:url('https://bimsmithstorage.blob.core.windows.net/news-content/20231114_hydrogels.png')
+}
+
+#mycellium{
+    grid-area: 3/1/4/3;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQZxV9xlSDpzpA8Vdg9FQsHtlGVsFW6_MAqA&s');
+}
+
+#earth{
+    grid-area: 1/4/2/6;
+    background-image:url('https://cms.lowimpact.org/wp-content/uploads/2013/01/earth_bag.jpg')
+}
+
+#mdf{
+    grid-area: 3/3/4/6;
+    background-image: url('https://www.thespruce.com/thmb/EfSSrxqCJ3CY-bOde9uMFsGmX5M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AlexPotemkinfiberboard-5c08130946e0fb00010bd428.jpg');
+}
+
+/* show information when hover using attr */
+.explain:hover::after {
+    content: attr(data-content); 
+    position: absolute;
+    color:rgb(34, 39, 92);
+    background-color: rgba(239, 89, 66, 0.8);
+    font-size: 0.8rem;
+    z-index: 10;
+    padding: 10px;
+    width: 90%;
+    line-height: 200%;
+    font-family: "IBM Plex Mono";
+    font-weight: 300;
+}
+
+/*hover behaviour*/
+.overlay a:hover,
+#materialBox > div:hover,
+#threeBythree > div:hover,
+.container > div:hover:before ,
+#fourByfour > div:hover,
+#fiveByFive > div:hover,
+.backBtn:hover{
+    border-radius: 10px;
+    transform: scale(1.01);
+    transition: transform 0.9s ease-in-out;
+    background-color: rgba(239, 89, 66, 0.8);
+    z-index: 3;
+}
